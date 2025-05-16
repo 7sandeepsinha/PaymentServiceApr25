@@ -3,12 +3,12 @@ package dev.sandeep.PaymentServiceApr25.dto;
 public class PaymentLinkReqDTO {
     private String orderId;
     private String userId;
-    private double amount;
+    private long amount;
 
     public PaymentLinkReqDTO() {
     }
 
-    public PaymentLinkReqDTO(String orderId, String userId, double amount) {
+    public PaymentLinkReqDTO(String orderId, String userId, long amount) {
         this.orderId = orderId;
         this.userId = userId;
         this.amount = amount;
@@ -30,11 +30,11 @@ public class PaymentLinkReqDTO {
         this.userId = userId;
     }
 
-    public double getAmount() {
+    public long getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(long amount) {
         this.amount = amount;
     }
 }
