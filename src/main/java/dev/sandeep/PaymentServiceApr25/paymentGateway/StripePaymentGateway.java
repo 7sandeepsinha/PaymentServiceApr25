@@ -11,12 +11,9 @@ import org.springframework.stereotype.Component;
 @Component("stripePayment")
 public class StripePaymentGateway implements PaymentGateway{
 
-    private String stripeAPIKey = "something";
-
 
     @Override
     public String generatePaymentLink(String orderId, long amount, String userId) throws StripeException {
-        Stripe.apiKey = stripeAPIKey;
 
         // price parameter object -> contains all necessary metadata for pricing
         PriceCreateParams priceCreateParams =
